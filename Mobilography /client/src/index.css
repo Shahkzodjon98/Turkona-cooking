@@ -1,0 +1,219 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Vollkorn SC", serif;
+  src: url("https://fonts.googleapis.com/css2?family=Vollkorn+SC:wght@400;600;700;900&display=swap");
+}
+@font-face {
+  font-family: "Inter", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+}
+
+@font-face {
+  font-family: "Verdana";
+  src: url("./assets/fonts/verdana.ttf");
+}
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+  background-color: #f72585;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 10px;
+}
+
+.bg-grad {
+  background: linear-gradient(
+    90deg,
+    #ffc752 0%,
+    #ff8b48 21.15%,
+    #f14d5c 44.06%,
+    #d63f8f 72.19%,
+    #9834c5 98.23%
+  );
+}
+.bg-tk {
+  background: linear-gradient(
+    90deg,
+    #00f2ea 8.69%,
+    #000 48.23%,
+    #000 63.85%,
+    #ff0050 100%
+  );
+}
+
+.circle::before {
+  content: "";
+  border-radius: 50%;
+  display: inline-flex;
+  width: 18px;
+  margin-right: 40px;
+  height: 18px;
+  background: #f72585;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+@media only screen and (min-width: 1200px) {
+  .circle::before {
+    content: "";
+    border-radius: 50%;
+    display: inline-flex;
+    width: 18px;
+    margin-right: 40px;
+    height: 18px;
+    background: #f72585;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+  .checkbox::before {
+    content: url("./assets/icons/checked.png");
+    margin-right: 4px;
+    align-items: center;
+    display: inline-flex;
+  }
+  .pink-bg {
+    background-image:
+      url("./assets/images/bg.png");
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .pink-bg {
+    background-image: linear-gradient(
+        360deg,
+        #f72585 15%,
+        rgba(255, 255, 255, 0) 60%
+      ),
+      url("./assets/images/turkona.png");
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+  .circle::before {
+    content: "";
+    border-radius: 50%;
+    display: inline-flex;
+    width: 10px;
+    margin-right: 10px;
+    height: 10px;
+    background: #f72585;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+}
+
+.checkbox::before {
+  content: url("./assets/icons/checked.png");
+  margin-right: 4px;
+  align-items: center;
+  display: inline-flex;
+}
+
+.form {
+  background: url("./assets/images/bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.hover-cont:hover {
+  cursor: pointer;
+}
+.hover-cont:hover .meals {
+  z-index: 1;
+  transform: translateY(60px);
+  -webkit-transform: translateY(60px);
+  -moz-transform: translateY(60px);
+  -ms-transform: translateY(60px);
+  -o-transform: translateY(60px);
+}
+.lds-heart {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  transform: rotate(45deg);
+  transform-origin: 40px 40px;
+}
+.lds-heart div {
+  top: 32px;
+  left: 32px;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background: #f72585;
+  animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.lds-heart div:after,
+.lds-heart div:before {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: #f72585;
+}
+.lds-heart div:before {
+  left: -24px;
+  border-radius: 50% 0 0 50%;
+}
+.lds-heart div:after {
+  top: -24px;
+  border-radius: 50% 50% 0 0;
+}
+@keyframes lds-heart {
+  0% {
+    transform: scale(0.95);
+  }
+  5% {
+    transform: scale(1.1);
+  }
+  39% {
+    transform: scale(0.85);
+  }
+  45% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+.active {
+  color: white;
+}

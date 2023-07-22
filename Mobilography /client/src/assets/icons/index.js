@@ -1,0 +1,7 @@
+export {default as checked} from "./checked.png"
+export {default as instagram} from "./instagram.png"
+export {default as telefon} from "./telefon.png"
+export {default as tg} from "./tg.png"
+export {default as website} from "./website.png"
+export {default as youtube} from "./youtube.png"
+export {default as tiktok} from "./tiktok.png"
